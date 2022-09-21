@@ -15,6 +15,8 @@ Run the server in server/index.js (use **node server/index.js**), and run the cl
 
 ![Screen Shot 2022-09-20 at 10 27 45 PM](https://user-images.githubusercontent.com/24702968/191421997-bc1bf12f-0240-4b7f-8ce9-f29738a1739a.png)
 
+![Screen Shot 2022-09-20 at 10 33 46 PM](https://user-images.githubusercontent.com/24702968/191422331-f89827bc-e89c-4cb9-bd71-bae8d0976aae.png)
+
 ![Screen Shot 2022-09-20 at 10 26 36 PM](https://user-images.githubusercontent.com/24702968/191422004-eab7a7d0-705f-469c-af83-7e22152cde93.png)
 
 
