@@ -27,4 +27,6 @@ For build simplifiction I used Create React App to get started.
 ### Features
 A pretty extensive form validation
 
+A Data Abstraction Layer to separate MongoDB specific code from Express to Data Store calls
+
 ### License: MIT
