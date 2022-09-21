@@ -8,7 +8,8 @@ If you would like to use my project, use git clone git@github.com:goalie2013/tie
 
 Run the server in server/index.js (use **node server/index.js**), and run the client-side in the client/ directory (use **npm start**).
 
-Screenshots
+
+### Screenshots
 
 ![Screen Shot 2022-09-20 at 10 27 20 PM](https://user-images.githubusercontent.com/24702968/191421645-cc804b4d-bfdd-44fb-af6e-8aa5b6249453.png)
 
