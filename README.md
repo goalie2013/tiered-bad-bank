@@ -5,6 +5,7 @@ I created this project as a learning experience for understanding how to create 
 
 ### Installation Guidelines
 If you would like to use my project, use git clone git@github.com:goalie2013/tiered-bad-bank.git
+
 Run the server in server/index.js (use **node server/index.js**), and run the client-side in the client/ directory (use **npm start**).
 
 Screenshots
