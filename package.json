@@ -1,0 +1,11 @@
+{
+  "name": "tiered-bad-bank-new",
+  "version": "1.0.0",
+  "description": "Project Title: Tiered Bad Bank Description/Motivation: I created this project as a learning experience for understanding how to create a full-stack application.",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gabgrin",
+  "license": "MIT"
+}
