@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
+const { userRoutes } = require("./routes/userRoutes");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const dal = require("./dal");
+const mongo = require("./dal");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,22 +17,12 @@ app.get("/", (req, res) => {
   res.send("Hello Express");
 });
 
-// Create User
-app.post("/api/users", (req, res) => {
-  console.log("post", req.query, req.params, req.body);
-  console.log(req.body.name);
-  // res.send(req.body);
-});
-
-// app.get("/api/users", (req, res) => {
-//   console.log("get", req.query, req.params, req.body);
-//   res.send(req.data);
-// });
+// app.use("/api/users");
 
 // Create User
 app.get("/account/create/:name/:email/:password", async (req, res) => {
   /* Using Promises Syntax 
-  dal.createUser(req.params.name,
+  mongo.createUser(req.params.name,
     req.params.email,
     req.params.password).then(user => {
       console.log(user);
@@ -38,7 +32,7 @@ app.get("/account/create/:name/:email/:password", async (req, res) => {
 
   /* Using Async/Await Syntax */
   try {
-    const newUser = await dal.createUser(
+    const newUser = await mongo.createUser(
       req.params.name,
       req.params.email,
       req.params.password
@@ -53,7 +47,7 @@ app.get("/account/create/:name/:email/:password", async (req, res) => {
 // Get All Users
 app.get("/account/all", async (req, res) => {
   try {
-    const allUsers = await dal.getAllUsers();
+    const allUsers = await mongo.getAllUsers();
     console.log("allUsers", allUsers);
     res.send(allUsers);
   } catch (err) {
@@ -61,7 +55,10 @@ app.get("/account/all", async (req, res) => {
   }
 });
 
-app.listen(3000);
+const PORT = process.env.PORT || 3001;
 
+app.listen(PORT, console.log(`Server running on Port ${PORT}`));
+
+// Another way to use CORS for DEVELOPMENT
 // in client's package.json:
-// "proxy": "http://localhost:1234",
+// "proxy": "http://127.0.0.1:5000",

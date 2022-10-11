@@ -103,7 +103,7 @@ export default function CreateAccount() {
       transactions: [],
     });
 
-    const url = `http://localhost:3000/account/create/${name}/${email}/${password}`;
+    const url = `http://localhost:5000/account/create/${name}/${email}/${password}`;
     (async () => {
       try {
         const response = await fetch(url);

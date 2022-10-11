@@ -2,8 +2,11 @@
 // ** Keeps index.js independent of what DB is used **
 // This DAL is specific to MongoDB
 
+//TODO: Refactor
+
 const MongoClient = require("mongodb").MongoClient;
 const url = "mongodb://localhost:27017";
+// const url = process.env.MONGO_URI
 let db = null;
 
 // Connect to MongoDB

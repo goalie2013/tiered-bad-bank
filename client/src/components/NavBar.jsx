@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Home from "../pages/Home";
-import CreateAccount from "../pages/CreateAccount";
-import PageWrapper from "../pages/PageWrapper";
-import Deposit from "../pages/Deposit";
-import Withdraw from "../pages/Withdraw";
-import UserData from "../pages/UserData";
-import { Route, Link, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [expanded, setExpanded] = useState(false);
@@ -18,7 +12,7 @@ export default function NavBar() {
   };
 
   return (
-    <div>
+    <>
       {/* <Router> */}
       <Navbar
         variant="light"
@@ -32,6 +26,7 @@ export default function NavBar() {
               Bad Bank
             </Link>
           </Navbar.Brand>
+
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
             onClick={() => setExpanded(expanded ? false : "expanded")}
@@ -122,6 +117,6 @@ export default function NavBar() {
             />
           </Routes> */}
       {/* </Router> */}
-    </div>
+    </>
   );
 }

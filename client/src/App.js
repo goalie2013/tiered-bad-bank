@@ -9,7 +9,7 @@ import PageWrapper from "./pages/PageWrapper";
 import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
 import UserData from "./pages/UserData";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import AllData from "./pages/AllData";
 
 function App() {
@@ -28,28 +28,31 @@ function App() {
           ],
         }}
       >
-        <Router>
+        <BrowserRouter>
           <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/createaccount" element={<CreateAccount />} />
-            <Route
-              path="/deposit"
-              element={<PageWrapper pageComponent={<Deposit />} />}
-            />
-            <Route
-              path="/withdraw"
-              element={<PageWrapper pageComponent={<Withdraw />} />}
-            />
-            <Route
-              path="/data"
-              element={<PageWrapper pageComponent={<UserData />} />}
-            />
-            <Route path="/alldata" element={<AllData />} />
-          </Routes>
-        </Router>
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/createaccount" element={<CreateAccount />} />
+              <Route
+                path="/deposit"
+                element={<PageWrapper pageComponent={<Deposit />} />}
+              />
+              <Route
+                path="/withdraw"
+                element={<PageWrapper pageComponent={<Withdraw />} />}
+              />
+              <Route
+                path="/data"
+                element={<PageWrapper pageComponent={<UserData />} />}
+              />
+              <Route path="/alldata" element={<AllData />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </BrowserRouter>
       </UserContext.Provider>
-      <Footer />
     </div>
   );
 }
